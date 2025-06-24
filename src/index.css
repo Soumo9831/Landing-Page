@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #10b981);
+  overflow-x: hidden;
+  width: 100%;
+  scroll-behavior: smooth; /* Enable smooth scrolling globally */
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent }
+  50% { border-color: #10b981 }
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 3px solid #10b981;
+  white-space: nowrap;
+  width: 0;
+  animation:
+    typing 3.2s steps(40, end) forwards,
+    blink 0.8s step-end infinite;
+}
+
+/* Optional fade-in for paragraph */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-text {
+  animation: fade-in 1s ease-out both;
+  animation-delay: 3.2s;
+}
